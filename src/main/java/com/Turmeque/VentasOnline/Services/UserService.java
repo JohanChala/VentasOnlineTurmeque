@@ -87,5 +87,27 @@ public class UserService {
             return new User ();
         }        
     }
+    
+    /**
+     * Metodo para actualizar un usuario
+     * @param user
+     * @return 
+     */
+    public User updateUser(User user){
+    
+        //Verificamos la existencia del usuario
+        Optional<User> res= repository.findById(user.getId());
+        if(!res.isPresent()){
+            return user;
+        }        
+        return repository.saveUser(user);
+    }
+    
+    
+    public String deleteUser(Integer id)
+    {
+        repository.deleteById(id);
+        return "Usuario removido" + id;
+    }
 
 }

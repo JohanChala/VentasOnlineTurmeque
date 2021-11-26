@@ -39,6 +39,12 @@ public class UserRepository {
     public User findUserAuthenticate(String email, String password) {
         return userRepo.findUserAuthenticate(email, password);
     }
+
+    public void deleteById(Integer id) {
+        userRepo.deleteById(id);
+    }
+    
+    
     
     
 }
