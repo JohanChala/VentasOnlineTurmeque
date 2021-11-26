@@ -24,7 +24,7 @@ public class UserRepository {
         return userRepo.findAll();
     }
     
-    public User FindByEmail(String email){
+    public User findByEmail(String email){
         return userRepo.findByEmail(email);
     }
     
@@ -35,4 +35,10 @@ public class UserRepository {
     public Optional<User> findById(Integer id){
         return userRepo.findById(id);
     }
+
+    public User findUserAuthenticate(String email, String password) {
+        return userRepo.findUserAuthenticate(email, password);
+    }
+    
+    
 }

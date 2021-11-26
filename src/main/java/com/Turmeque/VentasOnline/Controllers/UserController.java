@@ -60,12 +60,12 @@ public class UserController {
      * @param password
      * @return 
      */
-    /*
+    
     @GetMapping("/{email}/{password}")
     public User userAuthenticate(@PathVariable ("email") String email, @PathVariable ("password") String password){
         return service.userAuthenticate(email, password);
     }
-    */
+    
     
     /**
      * Metodo para registrar un nuevo usuario

@@ -67,7 +67,7 @@ public class UserService {
      */
     
     public boolean emailExist(String email){
-        User resultUser= repository.FindByEmail(email);
+        User resultUser= repository.findByEmail(email);
         return resultUser != null;     
     }
     
@@ -77,20 +77,15 @@ public class UserService {
      * @param password
      * @return 
      */
-      /*
+     
     public User userAuthenticate(String email, String password){
         
         User userResult = repository.findUserAuthenticate(email, password);
         if(userResult!=null){
             return userResult;
         }else{
-            User userNotAuthen= new User();
-            userNotAuthen.setEmail(email);
-            userNotAuthen.setPassword(password);
-            userNotAuthen.setName("NO DEFINIDO");
-            return userNotAuthen;
-        }
-        
+            return new User ();
+        }        
     }
-*/
+
 }

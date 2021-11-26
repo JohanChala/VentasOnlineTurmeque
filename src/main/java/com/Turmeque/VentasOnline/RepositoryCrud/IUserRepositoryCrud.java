@@ -17,4 +17,7 @@ public interface IUserRepositoryCrud extends MongoRepository<User,Integer>{
     @Query("{email: ?0}")
     public User findByEmail(String email);
     
+    @Query("{email: ?0,password: ?1}")
+    public User findUserAuthenticate (String email, String password);
+    
 }
