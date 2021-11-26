@@ -80,13 +80,22 @@ public class UserController {
         service.newUser(user);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
-    
+    /**
+     * Metodo para actualizar usuario
+     * @param user
+     * @return 
+     */
     @PutMapping("/update")
     public ResponseEntity updateUser(@RequestBody User user){
         service.updateUser(user);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
     
+    /**
+     * Metodo para borrar un Usuario
+     * @param id
+     * @return 
+     */
     @DeleteMapping("/delete/{id}")
     public ResponseEntity deleteUser(@PathVariable ("id") Integer id){
         service.deleteUser(id);

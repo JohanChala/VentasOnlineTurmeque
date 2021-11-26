@@ -103,7 +103,11 @@ public class UserService {
         return repository.saveUser(user);
     }
     
-    
+    /**
+     * Metodo para borrar un usuario
+     * @param id
+     * @return 
+     */
     public String deleteUser(Integer id)
     {
         repository.deleteById(id);
