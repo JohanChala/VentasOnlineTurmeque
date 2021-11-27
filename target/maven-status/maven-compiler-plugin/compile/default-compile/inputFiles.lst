@@ -1,7 +1,11 @@
 D:\00 - Johan\04 - Carrera Platzi\04 - Mintic diplomado\05 - Ciclo 4\Proyecto_Ciclo4\Backend_AltoTurmeque\VentasOnline\src\main\java\com\Turmeque\VentasOnline\RepositoryCrud\IUserRepositoryCrud.java
+D:\00 - Johan\04 - Carrera Platzi\04 - Mintic diplomado\05 - Ciclo 4\Proyecto_Ciclo4\Backend_AltoTurmeque\VentasOnline\src\main\java\com\Turmeque\VentasOnline\Controllers\ClotheController.java
 D:\00 - Johan\04 - Carrera Platzi\04 - Mintic diplomado\05 - Ciclo 4\Proyecto_Ciclo4\Backend_AltoTurmeque\VentasOnline\src\main\java\com\Turmeque\VentasOnline\Controllers\UserController.java
 D:\00 - Johan\04 - Carrera Platzi\04 - Mintic diplomado\05 - Ciclo 4\Proyecto_Ciclo4\Backend_AltoTurmeque\VentasOnline\src\main\java\com\Turmeque\VentasOnline\Entity\Clothe.java
+D:\00 - Johan\04 - Carrera Platzi\04 - Mintic diplomado\05 - Ciclo 4\Proyecto_Ciclo4\Backend_AltoTurmeque\VentasOnline\src\main\java\com\Turmeque\VentasOnline\RepositoryCrud\IClotheRepositoryCrud.java
+D:\00 - Johan\04 - Carrera Platzi\04 - Mintic diplomado\05 - Ciclo 4\Proyecto_Ciclo4\Backend_AltoTurmeque\VentasOnline\src\main\java\com\Turmeque\VentasOnline\Repository\ClotheRepository.java
 D:\00 - Johan\04 - Carrera Platzi\04 - Mintic diplomado\05 - Ciclo 4\Proyecto_Ciclo4\Backend_AltoTurmeque\VentasOnline\src\main\java\com\Turmeque\VentasOnline\VentasOnlineApplication.java
 D:\00 - Johan\04 - Carrera Platzi\04 - Mintic diplomado\05 - Ciclo 4\Proyecto_Ciclo4\Backend_AltoTurmeque\VentasOnline\src\main\java\com\Turmeque\VentasOnline\Repository\UserRepository.java
 D:\00 - Johan\04 - Carrera Platzi\04 - Mintic diplomado\05 - Ciclo 4\Proyecto_Ciclo4\Backend_AltoTurmeque\VentasOnline\src\main\java\com\Turmeque\VentasOnline\Services\UserService.java
 D:\00 - Johan\04 - Carrera Platzi\04 - Mintic diplomado\05 - Ciclo 4\Proyecto_Ciclo4\Backend_AltoTurmeque\VentasOnline\src\main\java\com\Turmeque\VentasOnline\Entity\User.java
+D:\00 - Johan\04 - Carrera Platzi\04 - Mintic diplomado\05 - Ciclo 4\Proyecto_Ciclo4\Backend_AltoTurmeque\VentasOnline\src\main\java\com\Turmeque\VentasOnline\Services\ClotheService.java

@@ -1,7 +1,11 @@
 com\Turmeque\VentasOnline\Entity\User.class
-com\Turmeque\VentasOnline\Controllers\UserController.class
+com\Turmeque\VentasOnline\Controllers\ClotheController.class
+com\Turmeque\VentasOnline\RepositoryCrud\IClotheRepositoryCrud.class
 com\Turmeque\VentasOnline\VentasOnlineApplication.class
-com\Turmeque\VentasOnline\Repository\UserRepository.class
+com\Turmeque\VentasOnline\Services\ClotheService.class
 com\Turmeque\VentasOnline\Entity\Clothe.class
-com\Turmeque\VentasOnline\RepositoryCrud\IUserRepositoryCrud.class
 com\Turmeque\VentasOnline\Services\UserService.class
+com\Turmeque\VentasOnline\Controllers\UserController.class
+com\Turmeque\VentasOnline\Repository\ClotheRepository.class
+com\Turmeque\VentasOnline\Repository\UserRepository.class
+com\Turmeque\VentasOnline\RepositoryCrud\IUserRepositoryCrud.class
