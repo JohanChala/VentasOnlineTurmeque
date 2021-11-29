@@ -21,6 +21,9 @@ public class UserService {
     @Autowired
     private UserRepository repository;
     
+    @Autowired
+    private SequenceGeneratorService autoId;
+    
     /**
      * Metodo para obtener todos los usuarios
      * @return 
@@ -42,7 +45,8 @@ public class UserService {
             boolean resultUser= emailExist(user.getEmail());
             if(resultUser){
               return user;  
-            }else{
+            }else{            
+              user.setId(autoId.generateSequence(User.SEQUENCE_NAME));
               return repository.saveUser(user);
             }           
         }else{
