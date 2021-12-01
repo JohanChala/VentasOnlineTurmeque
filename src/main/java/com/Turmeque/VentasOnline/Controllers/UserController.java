@@ -50,7 +50,7 @@ public class UserController {
      * @return 
      */
     
-    @GetMapping("/{email}")
+    @GetMapping("/emailexist/{email}")
     public boolean emailExist(@PathVariable ("email") String email){
         return service.emailExist(email);
     }
