@@ -96,7 +96,7 @@ public class UserController {
      * @param id
      * @return 
      */
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity deleteUser(@PathVariable ("id") Integer id){
         service.deleteUser(id);
         return ResponseEntity.status(204).build();
