@@ -8,6 +8,7 @@ package com.Turmeque.VentasOnline.Controllers;
 import com.Turmeque.VentasOnline.Entity.User;
 import com.Turmeque.VentasOnline.Services.UserService;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -66,6 +67,12 @@ public class UserController {
     @GetMapping("/{email}/{password}")
     public User userAuthenticate(@PathVariable ("email") String email, @PathVariable ("password") String password){
         return service.userAuthenticate(email, password);
+    }
+    
+    @GetMapping("/{id}")
+    public Optional<User> findById(@PathVariable("id") Integer id)
+    {
+        return service.findById(id);
     }
     
     

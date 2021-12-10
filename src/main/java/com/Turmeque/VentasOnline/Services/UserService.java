@@ -117,5 +117,9 @@ public class UserService {
         repository.deleteById(id);
         return "Usuario removido" + id;
     }
-
+    
+    public Optional<User> findById(Integer id)
+    {
+        return repository.findById(id);
+    }
 }

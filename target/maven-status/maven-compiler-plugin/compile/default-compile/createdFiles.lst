@@ -1,5 +1,6 @@
 com\Turmeque\VentasOnline\Entity\User.class
 com\Turmeque\VentasOnline\Controllers\ClotheController.class
+com\Turmeque\VentasOnline\Entity\Order.class
 com\Turmeque\VentasOnline\RepositoryCrud\IClotheRepositoryCrud.class
 com\Turmeque\VentasOnline\Services\SequenceGeneratorService.class
 com\Turmeque\VentasOnline\VentasOnlineApplication.class
