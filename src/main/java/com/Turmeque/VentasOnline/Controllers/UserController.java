@@ -69,6 +69,11 @@ public class UserController {
         return service.userAuthenticate(email, password);
     }
     
+    /**
+     * Metodo para obtener el usuario por Id
+     * @param id
+     * @return 
+     */
     @GetMapping("/{id}")
     public Optional<User> findById(@PathVariable("id") Integer id)
     {
