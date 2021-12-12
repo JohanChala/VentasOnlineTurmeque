@@ -126,10 +126,16 @@ public class OrderController {
         return service.getOrdersByDateAndUser(dateOrder, id);
     }
     
-    
-    
-    
-    
-    
+     /**
+      * Metodo para obtener las ordenes por estado y usuario
+      * @param state
+      * @param id
+      * @return 
+      */
+    @GetMapping("state/{state}/{id}")    
+    public List<Order> getOrdersByStateAndSalesman(@PathVariable ("state") String state,@PathVariable ("id") Integer id)
+    {
+        return service.getOrdersByStateAndSalesman(state, id);
+    }    
     
 }

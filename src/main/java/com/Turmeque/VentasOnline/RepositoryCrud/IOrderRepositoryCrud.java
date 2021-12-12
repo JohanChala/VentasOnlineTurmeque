@@ -24,5 +24,8 @@ public interface IOrderRepositoryCrud extends MongoRepository<Order,Integer>{
    @Query("{registerDay: ?0, 'salesMan.id': ?1 }")
    public List<Order> getOrdersByDateAndSalesman(Date date, Integer Id);
    
+   @Query("{status: ?0, 'salesMan.id': ?1}")
+   public List<Order> getOrdersByStateAndSalesman(String status, Integer Id);
+   
    
 }

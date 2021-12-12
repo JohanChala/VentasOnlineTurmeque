@@ -122,6 +122,17 @@ public class OrderService {
         return repository.getOrdersByDateAndUser(date, Id);
     }
     
+     /**
+     * Metodo para obtener las ordenes por estado y usuario
+     * @param state
+     * @param Id
+     * @return 
+     */
+    public List<Order> getOrdersByStateAndSalesman(String state, Integer Id)
+    {
+        return repository.getOrdersByStateAndSalesman(state, Id);
+    }
+    
     
     
 }

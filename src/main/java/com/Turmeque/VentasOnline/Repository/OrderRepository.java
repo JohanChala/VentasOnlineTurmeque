@@ -53,6 +53,12 @@ public class OrderRepository {
     {
         return orderRepo.getOrdersByDateAndSalesman(date, Id);
     }
+    
+    public List<Order> getOrdersByStateAndSalesman(String state, Integer Id){
+        return orderRepo.getOrdersByStateAndSalesman(state, Id);
+    }
+    
+    
    
    
 }
