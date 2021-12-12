@@ -14,6 +14,6 @@ import org.springframework.data.mongodb.repository.Query;
  * @author johan
  */
 public interface IOrderRepositoryCrud extends MongoRepository<Order,Integer>{
-   @Query("{salesMan.zone: ?0}") 
+   @Query("{'salesMan.zone': ?0}") 
    public List<Order> getOrdersByZone(String zone);
 }

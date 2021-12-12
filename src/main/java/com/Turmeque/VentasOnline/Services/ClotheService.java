@@ -87,4 +87,8 @@ public class ClotheService {
     {
       return repository.deleteByReference(reference);
     }
+    
+    public Optional<Clothe> findByReference(String reference){
+        return repository.findByReference(reference);
+    }
 }

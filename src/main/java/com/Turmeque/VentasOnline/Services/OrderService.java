@@ -80,6 +80,26 @@ public class OrderService {
         return repository.getOrdersByZone(zone);
     }
     
+     /**
+     * Metodo para actualizar una orden
+     * @param order
+     * @return 
+     */
+    public Order updateOrder (Order order){
+       
+        Optional<Order> res= repository.findById(order.getId());
+        if(!res.isPresent()){
+            return order;
+        }
+        
+        if(order.getStatus()!=null){
+            res.get().setStatus(order.getStatus());
+        }
+        
+        return repository.saveOrder(res.get());       
+          
+    }
+    
     
     
 }

@@ -7,6 +7,7 @@ package com.Turmeque.VentasOnline.Controllers;
 import com.Turmeque.VentasOnline.Entity.Clothe;
 import com.Turmeque.VentasOnline.Services.ClotheService;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -70,4 +71,11 @@ public class ClotheController {
         service.deleteClothe(reference);
         return ResponseEntity.status(204).build();
     }
+    
+    @GetMapping("/{reference}")
+    public Optional<Clothe> findByReference(@PathVariable ("reference") String reference){
+       return service.findByReference(reference);               
+    }
+    
+    
 }
