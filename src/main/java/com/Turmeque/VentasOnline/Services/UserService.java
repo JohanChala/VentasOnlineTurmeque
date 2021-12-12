@@ -118,6 +118,11 @@ public class UserService {
         return "Usuario removido" + id;
     }
     
+    /**
+     * Encontrar Usuario por Id
+     * @param id
+     * @return 
+     */
     public Optional<User> findById(Integer id)
     {
         return repository.findById(id);

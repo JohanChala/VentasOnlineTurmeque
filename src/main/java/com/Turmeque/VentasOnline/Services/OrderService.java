@@ -96,8 +96,13 @@ public class OrderService {
             res.get().setStatus(order.getStatus());
         }
         
-        return repository.saveOrder(res.get());       
+        return repository.saveOrder(res.get());      
           
+    }
+    
+    public List<Order> getOrdersByUser(Integer id)
+    {
+        return repository.getOrdersByUsers(id);
     }
     
     

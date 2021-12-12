@@ -99,5 +99,17 @@ public class OrderController {
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
     
+    /**
+     * Metodo para obtener las ordenes por usuario
+     * @param id
+     * @return 
+     */
+    @GetMapping("salesman/{id}")
+    public List<Order> getOrdersByUser(@PathVariable ("id") Integer id){
+        return service.getOrdersByUser(id);
+    }
+    
+    
+    
     
 }

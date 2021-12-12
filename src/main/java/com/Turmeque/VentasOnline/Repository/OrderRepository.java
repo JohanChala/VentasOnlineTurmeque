@@ -42,6 +42,11 @@ public class OrderRepository {
     public List<Order> getOrdersByZone(String zone){
         return orderRepo.getOrdersByZone(zone);
     }
+    
+    public List<Order> getOrdersByUsers(Integer id)
+    {
+        return orderRepo.getOrdersBySalesman(id);
+    }
    
    
 }
