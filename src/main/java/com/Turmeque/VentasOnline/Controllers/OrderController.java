@@ -1,0 +1,81 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.Turmeque.VentasOnline.Controllers;
+
+import com.Turmeque.VentasOnline.Entity.Order;
+import com.Turmeque.VentasOnline.Services.OrderService;
+import java.util.List;
+import java.util.Optional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ *
+ * @author johan
+ */
+@RestController
+@RequestMapping("order")
+@CrossOrigin(origins="*")
+public class OrderController {
+    /**
+     * Declaracion de parametros
+     */
+    @Autowired
+    private OrderService service;
+    
+    /**
+     * Metodo para obtener todos las ordenes
+     * @return 
+     */
+    @GetMapping("/all")
+    public List<Order> findAllOrders(){
+        return service.getOrders();
+    }
+    
+    /**
+     * MEtodo para obtener una orden por su ID
+     * @param id
+     * @return 
+     */
+    @GetMapping("/{id}")
+    public Optional<Order> findById(@PathVariable("id") Integer id)
+    {
+        return service.getOrder(id);
+    }
+    
+       
+    /**
+     * Metodo para registrar un nuevo usuario     
+     * @param order
+     * @return 
+     */
+    
+    @PostMapping("/new")
+    public ResponseEntity newUser(@RequestBody Order order){
+        service.newOrder(order);
+        return ResponseEntity.status(HttpStatus.CREATED).build();
+    }
+    
+      /**
+     * Metodo para borrar un Usuario
+     * @param id
+     * @return 
+     */
+    @DeleteMapping("/{id}")
+    public ResponseEntity deleteOrder(@PathVariable ("id") Integer id){
+        service.deleteOrder(id);
+        return ResponseEntity.status(204).build();
+    } 
+    
+}
