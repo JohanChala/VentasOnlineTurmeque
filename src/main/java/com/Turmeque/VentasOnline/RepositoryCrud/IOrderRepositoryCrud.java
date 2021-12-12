@@ -5,6 +5,7 @@
 package com.Turmeque.VentasOnline.RepositoryCrud;
 
 import com.Turmeque.VentasOnline.Entity.Order;
+import java.util.Date;
 import java.util.List;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
@@ -19,6 +20,9 @@ public interface IOrderRepositoryCrud extends MongoRepository<Order,Integer>{
    
    @Query("{'salesMan.id': ?0}")
    public List<Order> getOrdersBySalesman(Integer Id);
+   
+   @Query("{registerDay: ?0, 'salesMan.id': ?1 }")
+   public List<Order> getOrdersByDateAndSalesman(Date date, Integer Id);
    
    
 }

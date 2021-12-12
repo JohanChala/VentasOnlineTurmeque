@@ -7,6 +7,7 @@ package com.Turmeque.VentasOnline.Repository;
 
 import com.Turmeque.VentasOnline.Entity.Order;
 import com.Turmeque.VentasOnline.RepositoryCrud.IOrderRepositoryCrud;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,6 +47,11 @@ public class OrderRepository {
     public List<Order> getOrdersByUsers(Integer id)
     {
         return orderRepo.getOrdersBySalesman(id);
+    }
+    
+    public List<Order> getOrdersByDateAndUser(Date date, Integer Id)
+    {
+        return orderRepo.getOrdersByDateAndSalesman(date, Id);
     }
    
    

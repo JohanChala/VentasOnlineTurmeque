@@ -6,6 +6,9 @@ package com.Turmeque.VentasOnline.Controllers;
 
 import com.Turmeque.VentasOnline.Entity.Order;
 import com.Turmeque.VentasOnline.Services.OrderService;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -108,6 +111,23 @@ public class OrderController {
     public List<Order> getOrdersByUser(@PathVariable ("id") Integer id){
         return service.getOrdersByUser(id);
     }
+    
+    /**
+     * Metodo para obtner las ordenes por fecha y usuario
+     * @param date
+     * @param id
+     * @return 
+     * @throws java.text.ParseException 
+     */
+    @GetMapping("date/{date}/{id}")
+     public List<Order> getOrdersByUser(@PathVariable ("date") String date, @PathVariable ("id") Integer id)throws ParseException{
+        SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
+        Date dateOrder = formato.parse(date);
+        return service.getOrdersByDateAndUser(dateOrder, id);
+    }
+    
+    
+    
     
     
     

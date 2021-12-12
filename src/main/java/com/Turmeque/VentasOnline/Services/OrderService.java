@@ -6,6 +6,7 @@ package com.Turmeque.VentasOnline.Services;
 
 import com.Turmeque.VentasOnline.Entity.Order;
 import com.Turmeque.VentasOnline.Repository.OrderRepository;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -100,9 +101,25 @@ public class OrderService {
           
     }
     
+    /**
+     * Obtener las ordenes por usuario
+     * @param id
+     * @return 
+     */
     public List<Order> getOrdersByUser(Integer id)
     {
         return repository.getOrdersByUsers(id);
+    }
+    
+    /**
+     * Metodo para obtener las ordenes por fecha y usuario
+     * @param date
+     * @param Id
+     * @return 
+     */
+    public List<Order> getOrdersByDateAndUser(Date date, Integer Id)
+    {
+        return repository.getOrdersByDateAndUser(date, Id);
     }
     
     
