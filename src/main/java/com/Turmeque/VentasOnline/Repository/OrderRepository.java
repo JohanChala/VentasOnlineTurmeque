@@ -38,6 +38,10 @@ public class OrderRepository {
      public void deleteById(Integer id) {
         orderRepo.deleteById(id);
     }
+     
+    public List<Order> getOrdersByZone(String zone){
+        return orderRepo.getOrdersByZone(zone);
+    }
    
    
 }

@@ -71,6 +71,15 @@ public class OrderService {
         return repository.findById(id);
     }
     
+    /**
+     * Metodo para obtener una listado de order por zona
+     * @param zone
+     * @return 
+     */
+    public List<Order> getOrdersByZone(String zone){
+        return repository.getOrdersByZone(zone);
+    }
+    
     
     
 }

@@ -76,6 +76,12 @@ public class OrderController {
     public ResponseEntity deleteOrder(@PathVariable ("id") Integer id){
         service.deleteOrder(id);
         return ResponseEntity.status(204).build();
-    } 
+    }
+    
+    @GetMapping("zona/{zona}")
+    public List<Order> getOrdersByZone(@PathVariable ("zona") String zone){
+        return service.getOrdersByZone(zone);
+    }
+    
     
 }
