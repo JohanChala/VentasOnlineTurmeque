@@ -88,7 +88,22 @@ public class ClotheService {
       return repository.deleteByReference(reference);
     }
     
+    /**
+     * Obtiene el producto por referencia
+     * @param reference
+     * @return 
+     */
     public Optional<Clothe> findByReference(String reference){
         return repository.findByReference(reference);
+    }
+    
+    /**
+     * Metodo para obtener un listado de productos por descripcion
+     * @param description
+     * @return 
+     */
+    public List<Clothe> findByDescription(String description)
+    {
+        return repository.findByDescription(description);
     }
 }

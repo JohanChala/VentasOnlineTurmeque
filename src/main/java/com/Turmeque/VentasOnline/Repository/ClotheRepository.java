@@ -36,4 +36,10 @@ public class ClotheRepository {
     public Long deleteByReference(String reference) {
         return clotheRepo.deleteClotheByReference(reference);
     }
+    
+    public List<Clothe> findByDescription(String description){
+        return clotheRepo.findByDescription(description);
+    }
+    
+    
 }

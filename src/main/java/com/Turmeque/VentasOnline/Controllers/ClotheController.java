@@ -77,5 +77,10 @@ public class ClotheController {
        return service.findByReference(reference);               
     }
     
+    @GetMapping("description/{description}")
+    public List<Clothe> findByDescription(@PathVariable ("description") String description){
+       return service.findByDescription(description.toUpperCase());               
+    }
+    
     
 }
