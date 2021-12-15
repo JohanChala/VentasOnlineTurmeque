@@ -106,4 +106,13 @@ public class ClotheService {
     {
         return repository.findByDescription(description);
     }
+    
+    /**
+     * Metodo para obtener un listado de un producto por precio
+     * @param price
+     * @return 
+     */
+    public List<Clothe> findByPrice(double price){
+        return repository.findByPrice(price);
+    }
 }

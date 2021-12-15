@@ -41,5 +41,9 @@ public class ClotheRepository {
         return clotheRepo.findByDescription(description);
     }
     
+    public List<Clothe> findByPrice(double price){
+        return clotheRepo.findByPrice(price);
+    }
+    
     
 }

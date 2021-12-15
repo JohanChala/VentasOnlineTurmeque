@@ -82,5 +82,12 @@ public class ClotheController {
        return service.findByDescription(description.toUpperCase());               
     }
     
+     @GetMapping("price/{price}")
+    public List<Clothe> findByPrice(@PathVariable ("price") double price){
+       return service.findByPrice(price);               
+    }
+    
+    
+    
     
 }

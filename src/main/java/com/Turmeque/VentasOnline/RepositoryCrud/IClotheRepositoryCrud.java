@@ -23,4 +23,6 @@ public interface IClotheRepositoryCrud extends MongoRepository<Clothe,Integer>{
     
     @Query("{description: /?0/}")
     public List<Clothe> findByDescription(String description);
+    
+    public List<Clothe> findByPrice(double price);
 }
