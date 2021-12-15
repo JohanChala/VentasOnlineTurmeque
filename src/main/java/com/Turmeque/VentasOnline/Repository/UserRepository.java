@@ -43,4 +43,8 @@ public class UserRepository {
     public void deleteById(Integer id) {
         userRepo.deleteById(id);
     }    
+    
+    public List<User> findByMonthBirthtDay(String monthBirthtDay){
+        return userRepo.findByMonthBirthtDay(monthBirthtDay);
+    }
 }

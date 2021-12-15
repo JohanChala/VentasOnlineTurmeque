@@ -70,6 +70,16 @@ public class UserController {
     }
     
     /**
+     * Metodo para listar usuarios que cumplen en un mes especifico
+     * @param birthday
+     * @return 
+     */
+    @GetMapping("birthday/{birthday}")
+    public List<User> findUsersByMonthBirthday(@PathVariable ("birthday") String birthday){
+        return service.findByMonthBirthtDay(birthday);
+    }
+    
+    /**
      * Metodo para obtener el usuario por Id
      * @param id
      * @return 

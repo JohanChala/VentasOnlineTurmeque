@@ -127,4 +127,13 @@ public class UserService {
     {
         return repository.findById(id);
     }
+    
+    /**
+     * LIstar los usuarios que cumplen años en un mes especifico
+     * @param monthBirthtDay
+     * @return 
+     */
+    public List<User> findByMonthBirthtDay(String monthBirthtDay){
+        return repository.findByMonthBirthtDay(monthBirthtDay);
+    }
 }
